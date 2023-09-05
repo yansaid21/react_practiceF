@@ -1,0 +1,45 @@
+.cubeC{
+    width: 70px;
+    height: 70px;
+        transform-style:preserve-3d;
+        transform: rotateX(-10deg) rotateY(-10deg); 
+
+        /* animation: spin 8s infinite linear; */
+        position: fixed;
+        bottom: 250px;
+        right: 100px;
+    & div{
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        opacity: 0.8;
+    }
+    & .frontC{
+        transform: translateZ(35px);
+        background: linear-gradient(45deg, #dbea0c, #e30cea);
+        & .instagram{
+            opacity: 1;
+            fill: white;
+        }
+    }
+    & .backC{
+        transform: translateZ(-35px);   
+        background: linear-gradient(45deg, #dbea0c, #e30cea);
+    }
+    & .topC{
+        transform: rotateX(90deg) translateZ(35px);
+        background: linear-gradient(0deg, #e30cea,#dbea0c);
+    }
+    & .bottomC{
+        transform: rotateX(90deg) translateZ(-35px);
+        background: linear-gradient(45deg, #dbea0c, #e30cea);
+    }
+    & .leftC{
+        transform: rotateY(90deg)translateZ(35px);
+        background: linear-gradient(45deg, #e30cea,#dbea0c );
+    }
+    & .rightC{
+        transform: rotateY(90deg)translateZ(-35px);
+        background: linear-gradient(45deg, #dbea0c, #e30cea);
+    }
+}

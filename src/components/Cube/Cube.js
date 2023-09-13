@@ -1,11 +1,31 @@
-import React from 'react'
+import {React,useState} from 'react'
 import './Cube.scss';
 
 export const Cube = ({id}) => {
+    const [animationPaused, setAnimationPaused] = useState(false);
+    const handleCubeClick = () => {
+        console.log('Di clic en el cubo');
+        if (!animationPaused) {
+            console.log('Animación pausada');
+            const cube = document.getElementById('animatedCube');
+            const optionsContainer = document.getElementById('options');
+            if (cube && optionsContainer) {
+            cube.style.animationPlayState = 'paused';
+            optionsContainer.style.display = 'flex';
+            optionsContainer.style.flexDirection = 'column';
+            setAnimationPaused(true);
+            setTimeout(() => {
+                cube.style.animationPlayState = 'running';
+                setAnimationPaused(false);
+                optionsContainer.style.display = 'none';
+            }, 5000);
+            }
+        }
+    };
   return (
     <div className="loader">
       <div className="section-content" id={id}></div>
-    <div className="cube" id="animatedCube">
+    <div className="cube" id="animatedCube" onClick={handleCubeClick}>
     <div className="front"></div>
     <div className="back"></div>
     <div className="top"></div>
@@ -13,6 +33,7 @@ export const Cube = ({id}) => {
     <div className="left"></div>
     <div className="right"></div>
     </div>
+    <div id='options' className='optionsContainer'>
     <div className="cubeA" id="animatedCubeA">
         <div className="frontA">
             <div className="linkedin">
@@ -54,6 +75,7 @@ export const Cube = ({id}) => {
         <div className="bottomC"></div>
         <div className="leftC"></div>
         <div className="rightC"></div>
+    </div>
     </div>
     </div>
   )

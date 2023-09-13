@@ -3,6 +3,9 @@
     justify-content: center;
     align-items: center;
     height: 500px;
+    & .optionsContainer{
+        display: none;
+    }
     & .cube {
       width: 100px;
       height: 100px;

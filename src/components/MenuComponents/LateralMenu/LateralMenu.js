@@ -35,7 +35,7 @@ class Menu extends Component {
                 <li>
                   <Link
                     activeClass="active"
-                    to="Flexbox"
+                    to="flexbox"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -46,7 +46,7 @@ class Menu extends Component {
                 <li>
                   <Link
                     activeClass="active"
-                    to="Contact"
+                    to="section2"
                     spy={true}
                     smooth={true}
                     offset={-70}
@@ -56,7 +56,7 @@ class Menu extends Component {
                 <li>
                   <Link
                     activeClass="active"
-                    to="Products"
+                    to="section3"
                     spy={true}
                     smooth={true}
                     offset={-70}

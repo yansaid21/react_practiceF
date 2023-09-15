@@ -34,6 +34,7 @@ export const Cube = ({id}) => {
     <div className="right"></div>
     </div>
     <div id='options' className='optionsContainer'>
+        <a href='linkedin'>
     <div className="cubeA" id="animatedCubeA">
         <div className="frontA">
             <div className="linkedin">
@@ -48,6 +49,8 @@ export const Cube = ({id}) => {
         <div className="leftA"></div>
         <div className="rightA"></div>
     </div>
+    </a>
+    <a href='facebook'>
     <div className="cubeB" id="animatedCubeB">
         <div className="frontB">
             <div className="facebook">
@@ -62,6 +65,8 @@ export const Cube = ({id}) => {
         <div className="leftB"></div>
         <div className="rightB"></div>
     </div>
+    </a>
+    <a href='instagram'>
     <div className="cubeC" id="animatedCubeC">
         <div className="frontC">
             <div className="instagram">
@@ -76,6 +81,7 @@ export const Cube = ({id}) => {
         <div className="leftC"></div>
         <div className="rightC"></div>
     </div>
+    </a>
     </div>
     </div>
   )

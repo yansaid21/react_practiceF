@@ -7,8 +7,8 @@
         display: none;
     }
     & .cube {
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       transform-style:preserve-3d;
       animation: spin 8s infinite linear;
       position: fixed;
@@ -16,33 +16,33 @@
       right: 100px;
       & div{
           position: absolute;
-          width: 100px;
-          height: 100px;
+          width: 50px;
+          height: 50px;
           opacity: 0.8;
       }
       & .front{
-          transform: translateZ(50px);
+          transform: translateZ(25px);
           background: linear-gradient(45deg, #1c58ff, #0cea1e);
       }
       & .back{
-          transform: translateZ(-50px);   
-          background: linear-gradient(45deg, #d4ff00, #efb514);
+          transform: translateZ(-25px);   
+          background: linear-gradient(45deg, #ff00f2, #9500ff);
       }
       & .top{
-          transform: rotateX(90deg) translateZ(50px);
-          background: linear-gradient(45deg, #2fff00, #bdd846);
+          transform: rotateX(90deg) translateZ(25px);
+          background: linear-gradient(45deg, #1c58ff, #0cea1e);
       }
       & .bottom{
-          transform: rotateX(90deg) translateZ(-50px);
+          transform: rotateX(90deg) translateZ(-25px);
           background: linear-gradient(45deg, #ff00f2, #9500ff);
       }
       & .left{
-          transform: rotateY(90deg)translateZ(50px);
-          background: linear-gradient(45deg, #ff0000, #ff00d9);
+          transform: rotateY(90deg)translateZ(25px);
+          background: linear-gradient(45deg, #ff00f2, #9500ff);
       }
       & .right{
-          transform: rotateY(90deg)translateZ(-50px);
-          background: linear-gradient(45deg, #ffb300, #f90404);
+          transform: rotateY(90deg)translateZ(-25px);
+          background: linear-gradient(45deg, #1c58ff, #0cea1e);
       }
     }
     & :hover{
@@ -58,140 +58,140 @@
     }
 }
 .cubeA{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     transform-style:preserve-3d;
     transform: rotateX(-10deg) rotateY(-10deg) ; 
     /* animation: spin 8s infinite linear; */
     position: fixed;
-    bottom: 450px;
+    bottom: 350px;
     right: 100px;
     & div{
         position: absolute;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         opacity: 0.8;
     }
     & .frontA{
-        transform: translateZ(35px);
-        background: linear-gradient(180deg, #1c58ff, #9fddff);
+        transform: translateZ(25px);
+        background: linear-gradient(180deg, #1c58ff, #31b7ff);
         & .linkedin{
             opacity: 1;
             fill: white;
         }
     }
     & .backA{
-        transform: translateZ(-35px);   
-        background: linear-gradient(45deg, #1c58ff, #9fddff);
+        transform: translateZ(-25px);   
+        background: linear-gradient(45deg, #1c58ff, #31b7ff);
     }
     & .topA{
-        transform: rotateX(90deg) translateZ(35px);
-        background: linear-gradient(0deg, #1c58ff, #9fddff);
+        transform: rotateX(90deg) translateZ(25px);
+        background: linear-gradient(0deg, #1c58ff, #31b7ff);
     }
     & .bottomA{
-        transform: rotateX(90deg) translateZ(-35px);
-        background: linear-gradient(45deg, #1c58ff, #9fddff);
+        transform: rotateX(90deg) translateZ(-25px);
+        background: linear-gradient(45deg, #1c58ff, #31b7ff);
     }
     & .leftA{
-        transform: rotateY(90deg)translateZ(35px);
-        background: linear-gradient(45deg, #1c58ff, #9fddff);
+        transform: rotateY(90deg)translateZ(25px);
+        background: linear-gradient(45deg, #1c58ff, #31b7ff);
     }
     & .rightA{
-        transform: rotateY(90deg)translateZ(35px);
-        background: linear-gradient(90deg, #1c58ff, #9fddff);
+        transform: rotateY(90deg)translateZ(25px);
+        background: linear-gradient(90deg, #1c58ff, #31b7ff);
     }
 
 } 
 
 
 .cubeB{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     transform-style:preserve-3d;
     transform: rotateX(-10deg) rotateY(-10deg); 
 
     /* animation: spin 8s infinite linear; */
     position: fixed;
-    bottom: 350px;
+    bottom: 280px;
     right: 100px;
 & div{
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     opacity: 0.8;
 }
 & .frontB{
-    transform: translateZ(35px);
-    background: linear-gradient(45deg, #0cea1e, #dbea0c);
+    transform: translateZ(25px);
+    background: linear-gradient(45deg, #0cd4ea, #0091ff);
     & .facebook{
         opacity: 1;
         fill: white;
     }
 }
 & .backB{
-    transform: translateZ(-35px);   
-    background: linear-gradient(45deg, #0cea1e, #dbea0c);
+    transform: translateZ(-25px);   
+    background: linear-gradient(45deg, #0cd4ea, #0091ff);
 }
 & .topB{
-    transform: rotateX(90deg) translateZ(35px);
-    background: linear-gradient(45deg, #0cea1e, #dbea0c);
+    transform: rotateX(90deg) translateZ(25px);
+    background: linear-gradient(90deg, #0cd4ea, #0091ff);
 }
 & .bottomB{
-    transform: rotateX(90deg) translateZ(-35px);
-    background: linear-gradient(45deg, #0cea1e, #dbea0c);
+    transform: rotateX(90deg) translateZ(-25px);
+    background: linear-gradient(45deg, #0cd4ea, #0091ff);
 }
 & .leftB{
-    transform: rotateY(90deg)translateZ(35px);
-    background: linear-gradient(45deg, #0cea1e, #dbea0c);
+    transform: rotateY(90deg)translateZ(25px);
+    background: linear-gradient(90deg, #0cd4ea, #0091ff);
 }
 & .rightB{
-    transform: rotateY(90deg)translateZ(-35px);
-    background: linear-gradient(45deg, #1c58ff, #dbea0c);
+    transform: rotateY(90deg)translateZ(-25px);
+    background: linear-gradient(90deg, #0cd4ea, #0091ff);
 }
 
 }
 .cubeC{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
         transform-style:preserve-3d;
         transform: rotateX(-10deg) rotateY(-10deg); 
 
         /* animation: spin 8s infinite linear; */
         position: fixed;
-        bottom: 250px;
+        bottom: 210px;
         right: 100px;
     & div{
         position: absolute;
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
         opacity: 0.8;
     }
     & .frontC{
-        transform: translateZ(35px);
-        background: linear-gradient(45deg, #dbea0c, #e30cea);
+        transform: translateZ(25px);
+        background: linear-gradient(45deg, #ff977a, #e30cea);
         & .instagram{
             opacity: 1;
             fill: white;
         }
     }
     & .backC{
-        transform: translateZ(-35px);   
-        background: linear-gradient(45deg, #dbea0c, #e30cea);
+        transform: translateZ(-25px);   
+        background: linear-gradient(45deg, #ff977a, #e30cea);
     }
     & .topC{
-        transform: rotateX(90deg) translateZ(35px);
-        background: linear-gradient(0deg, #e30cea,#dbea0c);
+        transform: rotateX(90deg) translateZ(25px);
+        background: linear-gradient(0deg, #e30cea,#ff977a);
     }
     & .bottomC{
-        transform: rotateX(90deg) translateZ(-35px);
-        background: linear-gradient(45deg, #dbea0c, #e30cea);
+        transform: rotateX(90deg) translateZ(-25px);
+        background: linear-gradient(45deg, #ff977a, #e30cea);
     }
     & .leftC{
-        transform: rotateY(90deg)translateZ(35px);
-        background: linear-gradient(45deg, #e30cea,#dbea0c );
+        transform: rotateY(90deg)translateZ(25px);
+        background: linear-gradient(45deg, #e30cea,#ff977a );
     }
     & .rightC{
-        transform: rotateY(90deg)translateZ(-35px);
-        background: linear-gradient(45deg, #dbea0c, #e30cea);
+        transform: rotateY(90deg)translateZ(-25px);
+        background: linear-gradient(45deg, #ff977a, #e30cea);
     }
 }

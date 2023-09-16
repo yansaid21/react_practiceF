@@ -3,7 +3,7 @@ import LogoUam from '../../../assets/images/jpg/logoUam.png'
 import Avatar from '../../../assets/images/jpg/avatar1.png'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link} from "react-scroll";
 
 import './Navbar.scss'
 export const Navbar = ({id}) => {

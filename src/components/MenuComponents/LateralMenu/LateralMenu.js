@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './LateralMenu.scss';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link} from "react-scroll";
 
 class Menu extends Component {
   constructor(props) {

@@ -1,4 +1,67 @@
 .Section2{
-    height: 500px;
+    min-height: 500px;
+    height: auto;
     background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+.section2_content{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    bottom: -200px;
+    justify-content: space-evenly;
+}
+.card1{
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 300px;
+    width: 200px;
+    background-color: rgba(116, 116, 116, 0.107) ;
+    border-radius: 10px;
+    margin: 20px;
+
+}
+.CardImg{
+    margin: 30px;
+    width: 160px;
+    height: 200px;
+    border-radius: 10px;
+}
+.card2{
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 300px;
+    width: 200px;
+    background-color: rgba(116, 116, 116, 0.107) ;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.Drop_D{
+    background-color: rgba(116, 116, 116, 0.107);
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 200px;
+    height: auto;
+}
+.FlexD{
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
 }

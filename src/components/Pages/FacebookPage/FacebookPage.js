@@ -21,13 +21,13 @@ export const FacebookPage = () => {
       <div className="content">
         <Slider {...sliderSettings}>
           <div>
-          <img src={F1} class="slidePic" />
+          <img src={F1}  />
           </div>
           <div>
-          <img src={F2} class="slidePic"/>
+          <img src={F2} />
           </div>
           <div>
-          <img src={F3} class="slidePic"/>
+          <img src={F3} />
           </div>
         </Slider>
       </div>

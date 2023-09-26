@@ -3,6 +3,7 @@ import { Navbar } from '../../MenuComponents/Navbar/Navbar'
 import { LateralMenu } from '../../MenuComponents/LateralMenu/LateralMenu'
 import { Cube } from '../../Cube/Cube'
 import { Section2, Section3 } from '../../Sections/index'
+import { TraslucentMenu } from '../../TraslucentMenu/TraslucentMenu'
 
 export const HomePage = () => {
   return (

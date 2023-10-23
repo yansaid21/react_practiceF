@@ -117,34 +117,36 @@ export const Section2 = ({ id }) => {
       SetSecondCardActive((prevState) => !prevState);
     }
   }; */
+
+  //esto se utiliza
   return (
     <div className="Section2">
       <div className="section2_content" id={id}>
-        {categories.map((category) => {
-          return (
-            <li onClick={ShowServices(category.categoryId)}>
-              <Card key={category.categoryId} sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  sx={{ height: 140 }}
-                  image={category.categoryImg}
-                  title={category.categoryName}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {category.categoryName}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {category.categoryDescription}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>
-            </li>
-          );
-        })}
+        {/* {categories.map((category) => { 
+          //return (
+            //<li onClick={ShowServices(category.categoryId)}>
+              //<Card key={category.categoryId} sx={{ maxWidth: 345 }}>
+                //<CardMedia
+                  //sx={{ height: 140 }}
+                  //image={category.categoryImg}
+                  //title={category.categoryName}
+                ///>
+                //<CardContent>
+                  //<Typography gutterBottom variant="h5" component="div">
+                    //{category.categoryName}
+                  //</Typography>
+                  //<Typography variant="body2" color="text.secondary">
+                    //{category.categoryDescription}
+                  //</Typography>
+                //</CardContent>
+                //<CardActions>
+                  //<Button size="small">Share</Button>
+                  //<Button size="small">Learn More</Button>
+                //</CardActions>
+              //</Card>
+            //</li>
+          //);
+        //})} */}
         {/* <div className='card1' onClick={ActiveFlex}>
           <img src='https://www.abatec.com.mx/wp-content/uploads/mantenimiento-preventivo-abatec-1.png' className='CardImg'></img>
           <label>mantenimiento</label>
@@ -166,36 +168,36 @@ export const Section2 = ({ id }) => {
             <img className= 'CardImg' src='https://c8.alamy.com/compes/g09fg9/tecnicos-en-refrigeracion-calefaccion-y-refrigeracion-retro-g09fg9.jpg'></img>
           </div> */}
         
-        {Services.map((service) => (
-      <div key={service.serviceId} className="services">
-        <h2>{service.serviceName}</h2>
-        <ul className="service-images">
-          {service.serviceImages.map((image, index) => (
-            <li key={index}>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  sx={{ height: 140 }}
-                  image={image}
-                  title={service.serviceName}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {service.serviceName}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {service.serviceName}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+        {/* {Services.map((service) => ( 
+      //<div key={service.serviceId} className="services">
+        //<h2>{service.serviceName}</h2>
+        //<ul className="service-images">
+          //{service.serviceImages.map((image, index) => (
+            //<li key={index}>
+              //<Card sx={{ maxWidth: 345 }}>
+                //<CardMedia
+                  //sx={{ height: 140 }}
+                  //image={image}
+                  //title={service.serviceName}
+                ///>
+                //<CardContent>
+                  //<Typography gutterBottom variant="h5" component="div">
+                    //{service.serviceName}
+                  //</Typography>
+                  //<Typography variant="body2" color="text.secondary">
+                    //{service.serviceName}
+                  //</Typography>
+                //</CardContent>
+                //<CardActions>
+                  //<Button size="small">Share</Button>
+                  //<Button size="small">Learn More</Button>
+                //</CardActions>
+              //</Card>
+            //</li>
+          //))}
+        //</ul>
+      //</div>
+    //))} */}
       </div>
     </div>
   );

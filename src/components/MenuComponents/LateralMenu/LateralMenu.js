@@ -35,7 +35,7 @@ class Menu extends Component {
                 <li>
                   <Link
                     activeClass="active"
-                    to="flexbox"
+                    to="section1"
                     spy={true}
                     smooth={true}
                     offset={-70}

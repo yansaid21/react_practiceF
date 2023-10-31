@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Section2.scss";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -21,13 +21,20 @@ import imgcat5 from "../../assets/images/jpg/christmas-tree-bokeh-arlane-crump.j
  import s2imcat4 from "../../assets/images/jpg/sea2.jpeg"
  import s1imcat5 from "../../assets/images/jpg/ch1.jpeg"
  import s2imcat5 from "../../assets/images/jpg/ch2.jpeg"
-
+ import ImageList from '@mui/material/ImageList';
+ import ImageListItem from '@mui/material/ImageListItem';
 
 
  
-export const Section2 = ({ id }) => {
+export const Section2 = ({ id,news }) => {
+  const [likedNewsList, setLikedNewsList] = useState([]);
   const [Filtered,SetFiltered] = useState(false)
   
+  useEffect(() => {
+    const filterednew = news.filter(item => item.liked === true);
+    setLikedNewsList(filterednew);
+  }, news.liked);
+
   const ShowServices = ((category)=>{
     if (!Filtered){
     
@@ -122,6 +129,15 @@ export const Section2 = ({ id }) => {
   return (
     <div className="Section2">
       <div className="section2_content" id={id}>
+      {likedNewsList.length > 0 ? (
+          <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+            {likedNewsList.map((theNew) => (
+              <div>
+                {theNew.title}
+              </div>
+            ))}
+          </ImageList>
+        ) : <p>No hay noticias en el momento</p>}
         {/* {categories.map((category) => { 
           //return (
             //<li onClick={ShowServices(category.categoryId)}>

@@ -1,7 +1,50 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(17, 17, 17);
-    height: 10vh;
-    width: 100vh;
+
+}
+.Footer{
+    padding-top: 20px;
+    color: white;
+    font-size: large;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: rgba(19, 94, 117, 0.541);
+    height: 50vh;
+    width: 100%;
+    .Ubication{
+        align-items: center;
+        justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        svg{
+            fill: white;
+            height: 45px;
+            width: 45px;
+        }
+    }
+    .Social{
+        svg{
+            fill: white;
+            height: 50px;
+            width: 50px;
+        }
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .Priv{
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bolder;
+            :hover{
+                color: aquamarine;
+            }
+        }
+
+
+    }
 }

@@ -11,16 +11,15 @@ import Modal from '@mui/material/Modal';
 import { Fab } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { useLikedNews } from '../Context/LikedNewsContext/LikedNewsContext';
 
 export const Section1 = ({id, news}) => {
-  const [liked, setLiked] = React.useState(false);
-
-  console.log("news", news);
+  const { likedNews, setLikedNews } = useLikedNews();
     const [cart, setCart] = React.useState(false);
     const [open, setOpen] = React.useState(false);
     const [selectedNew, setSelectedNew] = React.useState(null);
-    
 
+    
     const handleOpen = (newId) => {
       const NewNew = news.find((theNew) => theNew._id === newId);
       setSelectedNew(NewNew);
@@ -34,12 +33,13 @@ export const Section1 = ({id, news}) => {
         slidesToShow: 1,
         slidesToScroll: 1,
       };
-      const likedSection = (newId) =>{
-        setLiked(true);
+      const likedSection = () =>{
+        console.log("id seleccionado del liked", selectedNew._id);
         selectedNew.liked=true
-        console.log("estado del like new", selectedNew.liked );
-        console.log("noticial completa liked", selectedNew);
-        setLiked(false)
+        setLikedNews((prevLikedNews) => [...prevLikedNews, selectedNew._id]);
+        console.log("likednews del context", likedNews);
+/*         console.log("estado del like new", selectedNew.liked );
+        console.log("noticial completa liked", selectedNew); */
       }
   return (
     <div className="section-content" id={id}>
@@ -77,7 +77,7 @@ export const Section1 = ({id, news}) => {
           {selectedNew.description}
           </Typography>
           <div className="button-fav-group">
-                          <Fab color="secondary" aria-label="Favorite icon" onClick={() => likedSection(theNew._id)}>
+                          <Fab color="secondary" aria-label="Favorite icon" onClick={() => likedSection()}>
                             <FavoriteIcon />
                           </Fab>
                           <Fab color="primary" aria-label="Favorite icon">

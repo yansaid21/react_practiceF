@@ -23,17 +23,20 @@ import imgcat5 from "../../assets/images/jpg/christmas-tree-bokeh-arlane-crump.j
  import s2imcat5 from "../../assets/images/jpg/ch2.jpeg"
  import ImageList from '@mui/material/ImageList';
  import ImageListItem from '@mui/material/ImageListItem';
+ import { useLikedNews } from "../Context/LikedNewsContext/LikedNewsContext";
 
 
  
 export const Section2 = ({ id,news }) => {
   const [likedNewsList, setLikedNewsList] = useState([]);
   const [Filtered,SetFiltered] = useState(false)
+  const { likedNews } = useLikedNews();
   
   useEffect(() => {
-    const filterednew = news.filter(item => item.liked === true);
-    setLikedNewsList(filterednew);
-  }, [news]);
+    const filteredNews = news.filter(item => likedNews.includes(item._id));
+    setLikedNewsList(filteredNews);
+  }, [likedNews, news]);
+  
 
   const ShowServices = ((category)=>{
     if (!Filtered){
@@ -132,7 +135,7 @@ export const Section2 = ({ id,news }) => {
       {likedNewsList.length > 0 ? (
           <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
             {likedNewsList.map((theNew) => (
-              <div>
+              <div key={theNew._id}>
                 {theNew.title}
               </div>
             ))}

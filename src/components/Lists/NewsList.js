@@ -2,7 +2,7 @@ import React from 'react'
 import { Section1 } from '../Sections/Section1'
 import { Section2 } from '../Sections/Section2'
 import {images} from "../../assets/images"
-
+import { LikedNewsProvider } from '../Context/LikedNewsContext/LikedNewsContext'
 
 
 const NewsList = () => {
@@ -51,6 +51,7 @@ const NewsList = () => {
     ]
   return (
     <div className='sections-content'>
+      <LikedNewsProvider>
       <Section1 news= {news}
       title="Section 1"
       id= "section1"/>
@@ -58,6 +59,7 @@ const NewsList = () => {
       news={news}
       title="Section 2"
       id="section2"/>
+      </LikedNewsProvider>
     </div>
   )
 }

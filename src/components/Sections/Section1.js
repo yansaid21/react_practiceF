@@ -12,9 +12,11 @@ import { Fab } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import { useLikedNews } from '../Context/LikedNewsContext/LikedNewsContext';
+import { useCartNews } from '../Context/LikedNewsContext/LikedNewsContext';
 
 export const Section1 = ({id, news}) => {
   const { likedNews, setLikedNews } = useLikedNews();
+  const {cartNews, setCartNews} = useCartNews();
     const [cart, setCart] = React.useState(false);
     const [open, setOpen] = React.useState(false);
     const [selectedNew, setSelectedNew] = React.useState(null);
@@ -38,8 +40,12 @@ export const Section1 = ({id, news}) => {
         selectedNew.liked=true
         setLikedNews((prevLikedNews) => [...prevLikedNews, selectedNew._id]);
         console.log("likednews del context", likedNews);
-/*         console.log("estado del like new", selectedNew.liked );
-        console.log("noticial completa liked", selectedNew); */
+      }
+      const cartSection = () =>{
+        console.log("id seleccionado del liked", selectedNew._id);
+        selectedNew.cart=true
+        setCartNews((prevCartNews) => [...prevCartNews, selectedNew._id]);
+        console.log("cartnews del context", likedNews);
       }
   return (
     <div className="section-content" id={id}>
@@ -80,7 +86,7 @@ export const Section1 = ({id, news}) => {
                           <Fab color="secondary" aria-label="Favorite icon" onClick={() => likedSection()}>
                             <FavoriteIcon />
                           </Fab>
-                          <Fab color="primary" aria-label="Favorite icon">
+                          <Fab color="primary" aria-label="Favorite icon" onClick={() => cartSection()}>
                             <AddShoppingCartIcon />
                           </Fab>
                           </div>

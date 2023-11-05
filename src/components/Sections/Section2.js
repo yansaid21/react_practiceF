@@ -33,7 +33,7 @@ export const Section2 = ({ id,news }) => {
   useEffect(() => {
     const filterednew = news.filter(item => item.liked === true);
     setLikedNewsList(filterednew);
-  }, news.liked);
+  }, [news]);
 
   const ShowServices = ((category)=>{
     if (!Filtered){

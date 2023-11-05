@@ -12,10 +12,6 @@ import { Fab } from "@mui/material";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
-
-
-const likedNews= [null];
-const cartNews= [null];
 export const Section1 = ({id, news}) => {
   const [liked, setLiked] = React.useState(false);
 

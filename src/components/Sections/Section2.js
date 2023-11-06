@@ -25,7 +25,9 @@ import imgcat5 from "../../assets/images/jpg/christmas-tree-bokeh-arlane-crump.j
  import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useCartNews } from '../Context/LikedNewsContext/LikedNewsContext';
-
+import { Fab } from "@mui/material";
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 
 
  
@@ -142,34 +144,49 @@ export const Section2 = ({ id,news }) => {
   return (
     <div className="Section2">
       <div className="section2_content" id={id}>
+        <div className="LikedSection">
+
       {likedNewsList.length > 0 ? (
-          <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+        <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
             {likedNewsList.map((theNew) => (
-              <ImageListItem key={theNew.avatar}>
+              <div key={theNew._id}>
+             <p>{theNew.title}</p>
+           <ImageListItem key={theNew._id}>
               <img
                 srcSet={`${theNew.avatar}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 src={`${theNew.avatar}?w=164&h=164&fit=crop&auto=format`}
                 alt={theNew.title}
                 loading="lazy"
-              />
+                />
             </ImageListItem>
+            </div>
             ))}
           </ImageList>
-        ) : <p>No hay noticias en el momento</p>}
+        ) : <p>there isn't content in this moment</p>}
+                            <FavoriteIcon className="iconSection"/>
+
+        </div>
+        <div className="CartSection">
         {cartNewsList.length > 0 ? (
           <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
             {cartNewsList.map((theNew) => (
-              <ImageListItem key={theNew.avatar}>
-              <img
+              <div key={theNew._id}>
+                <p>{theNew.title}</p>
+              <ImageListItem key={theNew._id}>
+              <img 
                 srcSet={`${theNew.avatar}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                 src={`${theNew.avatar}?w=164&h=164&fit=crop&auto=format`}
                 alt={theNew.title}
                 loading="lazy"
-              />
+                />
             </ImageListItem>
+                </div>
             ))}
           </ImageList>
-        ) : <p>No hay noticias en el momento</p>}
+        ) : <p>there isn't content in this moment</p>}
+                            <AddShoppingCartIcon className="iconSection" />
+
+        </div>
         {/* {categories.map((category) => { 
           //return (
             //<li onClick={ShowServices(category.categoryId)}>

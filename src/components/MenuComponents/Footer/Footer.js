@@ -1,5 +1,7 @@
 import React from 'react'
 import "./Footer.scss"
+import LogoUam from "../../../assets/images/jpg/logoUam.png";
+
 const Footer = () => {
   return (
     <div className='Footer'>
@@ -35,6 +37,7 @@ const Footer = () => {
         </div>
         <div className='Priv'>
             <a href='privacy'>Políticas de Privacidad</a>
+            <img src={LogoUam}/>
         </div>
     </div>
   )

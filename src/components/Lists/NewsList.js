@@ -9,7 +9,7 @@ const NewsList = () => {
     const news= [ 
       {
         _id: "1",
-        title: "estrella de mar cura del cancer",
+        title: "cura bajo el mar",
         subtitle: "realidad o una farsa",
         description: "científicos de la universidad de harvard han descubierto la cura del cancer en las estrellas de mar",
         created_at: "10/10/2023",

@@ -3,16 +3,18 @@
     height: 100%;
     cursor: pointer;
     padding-right:10px ;
+    background-color: rgba(19, 94, 117, 0.541);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 
     & .menu{
-
         top: 0;
         left: 0;
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: rgba(19, 94, 117, 0.541);
         padding: 10px 0px;
         z-index: 100;
     & ul{
@@ -51,7 +53,8 @@
         max-height: 70px;
         margin: 0 20px;
     }
-        .avatar-container{
+    .avatar-container{
+
             display: flex;
             align-items: center;
             & img.avatar{
@@ -63,10 +66,6 @@
         }
 
     
-}
-& .content{
-    padding-left: 40px;
-    padding-right: 40px;
 }
 }
 #check{
@@ -125,7 +124,6 @@
     }
 }
 .Log{
-    
     margin-right: 20px;
     a{
         color: white;

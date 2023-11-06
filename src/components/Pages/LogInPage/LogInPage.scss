@@ -10,12 +10,13 @@
     color: white;
     flex-direction: column;
     & .LogInContainer{
-        
+        margin-bottom: 60px;
+        flex-wrap: nowrap;
         display: flex;
         align-items: stretch;
         justify-content: space-evenly;
         flex-direction: column;
-        width: 60%;
+        width: 40%;
         height: 60%;
     }
     & .LogInTittle{
@@ -46,6 +47,7 @@
         flex-wrap: nowrap;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
+        font-size: small;
     } 
 }

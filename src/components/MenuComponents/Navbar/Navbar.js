@@ -6,10 +6,9 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link } from "react-scroll";
 
 import "./Navbar.scss";
-export const Navbar = ({ id }) => {
+export const Navbar = () => {
   return (
     <div className="container">
-      <div className="section-content" id={id}></div>
       <div className="menu">
         <input type="checkbox" id="check" />
         <label htmlFor="check" className="icons">
@@ -59,10 +58,9 @@ export const Navbar = ({ id }) => {
         <div className="avatar-container">
           <img src={Avatar} alt="Foto de perfil" className="avatar" />
         </div>
-        <div className="Log"><a href="LogIn">
-            Log in
-            </a>
-            </div>
+      </div>
+      <div className="Log">
+        <a href="LogIn">Log in</a>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ function a11yProps(index) {
 }
 
   return (
-      <div className='privacy'>
+      <div className='PrivacyPolicy'>
           <div className='box'>
               <Box sx={{ width: '100%' }} >
                   <Box sx={{ borderBottom: 1, borderColor: '#340665' }}>

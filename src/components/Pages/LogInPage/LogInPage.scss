@@ -1,0 +1,51 @@
+.LogIn{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 194, 194);
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    flex-direction: column;
+    & .LogInContainer{
+        
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+        flex-direction: column;
+        width: 60%;
+        height: 60%;
+    }
+    & .LogInTittle{
+        color: white;
+        font-weight: 900;
+        font-size: 50px;
+    }
+    & .UserName{
+        color: white;
+        border-color: white;
+    }
+    & .UserPassword{
+        color: white;
+        border-color: white;
+    }
+    & .Check-Section{
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        color: white;
+        margin: 5px;
+        font-weight: 600;
+    }
+    & .LogInButton{
+        background-color: rgb(180, 43, 180);
+    }
+    & .LinksLogIn{
+        flex-wrap: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } 
+}
